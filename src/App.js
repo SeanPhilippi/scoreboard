@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './App.css';
 import Header from './components/Header';
 import Player from './components/Player';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  state = {
       players: [
         {
           name: "Sean",
@@ -25,21 +22,20 @@ class App extends Component {
           name: "Paul",
           score: 15
         },
-
       ]
     }
-  }
 
   render() {
     return (
-      <div className="scoreboard" initialPlayers={this.props.players}>
-        <Header title="scoreboard" totalPlayers={1}/>
+      <div className="scoreboard">
+        <Header title="scoreboard" players={this.state.players}/>
 
         {/* Players list */}
-        {this.props.initialPlayers.map(player =>
+        {this.state.players.map((player, idx) =>
           <Player
             name={player.name}
             score={player.score}
+            key={idx}
           />
         )}
       </div>
