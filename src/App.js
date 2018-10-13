@@ -3,27 +3,31 @@ import './App.css';
 import Header from './components/Header';
 import Player from './components/Player';
 
-class App extends Component {
+class Scoreboard extends Component {
   state = {
       players: [
         {
           name: "Sean",
-          score: 50
+          score: 50, 
+          id: 1
         },
         {
           name: "Mark",
-          score: 35
+          score: 35,
+          id: 2
         },
         {
           name: "Tracey",
-          score: 28
+          score: 28,
+          id: 3
         },
         {
           name: "Paul",
-          score: 15
+          score: 15,
+          id: 4
         },
       ]
-    }
+  }
 
   render() {
     return (
@@ -35,7 +39,7 @@ class App extends Component {
           <Player
             name={player.name}
             score={player.score}
-            key={idx}
+            key={player.id.toString()}
           />
         )}
       </div>
@@ -43,4 +47,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Scoreboard;
