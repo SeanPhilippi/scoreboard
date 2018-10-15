@@ -39,6 +39,13 @@ class Scoreboard extends Component {
     this.setState(newState);
   }
 
+  handleRemovePlayer = (id) => {
+    this.setState( prevState => ({
+      // pass in prevState to avoid mutating state, and set players to players that do not have an id matching id
+      players: prevState.players.filter( p => p.id !== id)
+    }))
+  }
+
   render() {
     return (
       <div className="scoreboard">
@@ -50,9 +57,11 @@ class Scoreboard extends Component {
             name={player.name}
             score={player.score}
             key={player.id.toString()}
+            id={player.id}
             lastName={player.last}
             increment={this.incrementScore}
             idx={idx}
+            remove={this.handleRemovePlayer}
           />
         )}
       </div>

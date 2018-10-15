@@ -12,7 +12,7 @@ class Counter extends React.Component {
         <span className="counter-score">{this.props.score}</span>
         <button 
           className="counter-increment" 
-          onClick={() => this.props.increment(1, this.props.idx)}> + 
+          onClick={ () => this.props.increment(1, this.props.idx) }> + 
         </button>
       </div>
     )
