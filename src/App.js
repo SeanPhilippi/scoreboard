@@ -5,28 +5,38 @@ import Player from './components/Player';
 
 class Scoreboard extends Component {
   state = {
-      players: [
-        {
-          name: "Sean",
-          score: 50, 
-          id: 1
-        },
-        {
-          name: "Mark",
-          score: 35,
-          id: 2
-        },
-        {
-          name: "Tracey",
-          score: 28,
-          id: 3
-        },
-        {
-          name: "Paul",
-          score: 15,
-          id: 4
-        },
-      ]
+    players: [
+      {
+        name: "Sean",
+        last: "Philippi",
+        score: 50, 
+        id: 0
+      },
+      {
+        name: "Mark",
+        last: "Philippi",
+        score: 35,
+        id: 1
+      },
+      {
+        name: "Tracey",
+        last: "Philippi",
+        score: 28,
+        id: 2
+      },
+      {
+        name: "Paul",
+        last: "Philippi",
+        score: 15,
+        id: 3
+      },
+    ]
+  }
+
+  incrementScore = (change, idx) => {
+    const newState = this.state;
+    newState.players[idx].score += change;
+    this.setState(newState);
   }
 
   render() {
@@ -40,6 +50,9 @@ class Scoreboard extends Component {
             name={player.name}
             score={player.score}
             key={player.id.toString()}
+            lastName={player.last}
+            increment={this.incrementScore}
+            idx={idx}
           />
         )}
       </div>

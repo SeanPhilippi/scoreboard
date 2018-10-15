@@ -1,20 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types'
 import Stats from './Stats';
 
-const Header = (props) => {
+class Header extends React.Component {
 
-  return (
-    <header>
-      <h1>{ props.title }</h1>
-      <Stats players={props.players}/>
-    </header>
-  )
-}
-
-Header.propTypes = {
-  title: PropTypes.string.isRequired,
-  players: PropTypes.array.isRequired
+  render() {
+    return (
+      <header>
+        <h1>{ this.props.title }</h1>
+        <Stats players={this.props.players}/>
+      </header>
+    )
+  }
 }
 
 export default Header;
