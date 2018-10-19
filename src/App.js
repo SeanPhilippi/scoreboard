@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Player from './components/Player';
+import AddPlayerForm from './components/AddPlayerForm';
 
 class Scoreboard extends Component {
   state = {
@@ -14,19 +15,19 @@ class Scoreboard extends Component {
       },
       {
         name: "Mark",
-        last: "Philippi",
+        last: "Faire",
         score: 35,
         id: 1
       },
       {
         name: "Tracey",
-        last: "Philippi",
+        last: "Miller",
         score: 28,
         id: 2
       },
       {
         name: "Paul",
-        last: "Philippi",
+        last: "Rankin",
         score: 15,
         id: 3
       },
@@ -49,7 +50,7 @@ class Scoreboard extends Component {
   render() {
     return (
       <div className="scoreboard">
-        <Header title="scoreboard" players={this.state.players}/>
+        <Header title="scoreboard" players={this.state.players} />
 
         {/* Players list */}
         {this.state.players.map((player, idx) =>
@@ -64,6 +65,8 @@ class Scoreboard extends Component {
             remove={this.handleRemovePlayer}
           />
         )}
+
+        <AddPlayerForm/>
       </div>
     );
   }
