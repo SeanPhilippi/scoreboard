@@ -34,10 +34,23 @@ class Scoreboard extends Component {
     ]
   }
 
+    // player id counter
+    prevPlayerId = 4;
+
   incrementScore = (change, idx) => {
     const newState = this.state;
     newState.players[idx].score += change;
     this.setState(newState);
+  }
+
+  handleAddPlayer = (name) => {
+    this.setState({
+      players: [
+        name: name,
+        score: 0,
+        id: this.prevPlayerId += 1
+      ]
+    })
   }
 
   handleRemovePlayer = (id) => {
@@ -66,7 +79,7 @@ class Scoreboard extends Component {
           />
         )}
 
-        <AddPlayerForm/>
+        <AddPlayerForm addPlayer={this.handleAddPlayer}/>
       </div>
     );
   }
