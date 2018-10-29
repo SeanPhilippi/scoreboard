@@ -11,31 +11,31 @@ class Scoreboard extends Component {
         name: "Sean",
         last: "Philippi",
         score: 50, 
-        id: 0
+        id: 1
       },
       {
         name: "Mark",
         last: "Faire",
         score: 35,
-        id: 1
+        id: 2
       },
       {
         name: "Tracey",
         last: "Miller",
         score: 28,
-        id: 2
+        id: 3
       },
       {
         name: "Paul",
         last: "Rankin",
         score: 15,
-        id: 3
+        id: 4
       },
     ]
   }
 
-    // player id counter
-    prevPlayerId = 4;
+  // player id counter
+  prevPlayerId = 4;
 
   incrementScore = (change, idx) => {
     const newState = this.state;
@@ -43,12 +43,28 @@ class Scoreboard extends Component {
     this.setState(newState);
   }
 
+  // handleAddPlayer = (name) => {
+  //   const newPlayer = {
+  //     name: name,
+  //     score: 0,
+  //     id: this.prevPlayerId += 1
+  //   }
+  //   this.setState(prevState => ({
+  //     players: prevState.players.push(newPlayer)
+  //   }))
+  // }
+
+  // name is this.state.value which was received via handleValueChange() in onChange attribute
+  // of input element and passed down to AddPlayerForm element's addPlayer prop
   handleAddPlayer = (name) => {
     this.setState({
       players: [
-        name: name,
-        score: 0,
-        id: this.prevPlayerId += 1
+        ...this.state.players,
+        {
+          name,
+          score: 0,
+          id: this.prevPlayerId += 1
+        }
       ]
     })
   }

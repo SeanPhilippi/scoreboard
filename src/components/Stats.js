@@ -8,8 +8,10 @@ const Stats = (props) => {
 
   return (
     <table className="stats">
-      <tr>Players: { props.players.length }</tr>
-      <tr>Total Points: { totalPoints }</tr>
+      <tbody>
+        <tr>Players: { props.players.length }</tr>
+        <tr>Total Points: { totalPoints }</tr>
+      </tbody>
     </table>
   )
 }

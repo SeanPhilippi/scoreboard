@@ -14,10 +14,11 @@ class AddPlayerForm extends React.Component {
       // prevent page reload which would reset state
       e.preventDefault();
       this.props.addPlayer(this.state.value);
+      this.setState({ value: ''})
    }
 
    render() {
-      console.log(this.state.value)
+      console.log('value', this.state.value)
       return (
          <form onSubmit={this.handleSubmit}>
             <input 
