@@ -43,7 +43,7 @@ class Stopwatch extends Component {
       })
    }
 
-   render() {
+   render() { 
       const seconds = Math.floor(this.state.elapsedTime / 1000);
 
       return (
