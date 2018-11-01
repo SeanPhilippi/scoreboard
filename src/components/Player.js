@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import Counter from './Counter';
-
-class Player extends React.Component {
+// PureComponent implements a lifecycle method called shouldComponentUpdate() in the background
+// checks to see if re-render is required for a component, will only call render if change
+// in state or props is detected
+class Player extends PureComponent {
   render() {
     return (
       <div className="player">
