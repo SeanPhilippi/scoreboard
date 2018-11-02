@@ -5,7 +5,7 @@ import Counter from './Counter';
 // checks to see if re-render is required for a component, will only call render if change
 // in state or props is detected
 class Player extends PureComponent {
-
+  // 
   static propTypes = {
     increment: PropTypes.func,
     remove: PropTypes.func,

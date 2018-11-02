@@ -43,19 +43,6 @@ class Scoreboard extends Component {
     this.setState(newState);
   }
 
-  // handleAddPlayer = (name) => {
-  //   const newPlayer = {
-  //     name: name,
-  //     score: 0,
-  //     id: this.prevPlayerId += 1
-  //   }
-  //   this.setState(prevState => ({
-  //     players: prevState.players.push(newPlayer)
-  //   }))
-  // }
-
-  // name is this.state.value which was received via handleValueChange() in onChange attribute
-  // of input element and passed down to AddPlayerForm element's addPlayer prop
   handleAddPlayer = (name) => {
     this.setState(prevState => {
       return {

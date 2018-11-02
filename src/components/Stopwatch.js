@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Stopwatch extends Component {
 
@@ -6,6 +7,13 @@ class Stopwatch extends Component {
       isRunning: false,
       elapsedTime: 0, // accumulated amount of time that has passed by between ticks
       previousTime: 0
+   }
+
+   static propTypes = {
+      onClick: PropTypes.func,
+      isRunning: PropTypes.bool,
+      elapsedTime: PropTypes.number,
+      previousTime: PropTypes.number
    }
 
    componentDidMount() {

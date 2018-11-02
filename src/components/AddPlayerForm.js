@@ -1,6 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class AddPlayerForm extends React.Component {
+
+   static propTypes = {
+      type: PropTypes.string,
+      ref: PropTypes.func,
+      placeholder: PropTypes.string,
+      value: PropTypes.string
+   }
    // ref used so render doesn't have to be called upon every keypress
    // instead, called upon submit.  using state here was bulky vs using ref
    playerInput = React.createRef();
