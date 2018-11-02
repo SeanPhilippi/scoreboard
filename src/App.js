@@ -81,7 +81,7 @@ class Scoreboard extends Component {
   render() {
     return (
       <div className="scoreboard">
-        <Header title="scoreboard" players={this.state.players} />
+        <Header players={this.state.players} />
 
         {/* Players list */}
         {this.state.players.map((player, idx) =>

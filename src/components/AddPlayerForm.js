@@ -2,7 +2,7 @@ import React from 'react';
 
 class AddPlayerForm extends React.Component {
    // ref used so render doesn't have to be called upon every keypress
-   // instead, called upon submit now.  using state here was bulky vs using ref
+   // instead, called upon submit.  using state here was bulky vs using ref
    playerInput = React.createRef();
 
    handleSubmit = (e) => {
@@ -13,6 +13,8 @@ class AddPlayerForm extends React.Component {
    }
 
    render() {
+      console.log(this.playerInput);
+      
       return (
          <form onSubmit={this.handleSubmit}>
             <input 
