@@ -6,5 +6,5 @@ Scoreboard app for a hypothetical game I created to practice React.  There is a 
 
 ## Deployment
 
-This site is deployed via GitHub Pages. 
+This site is deployed via GitHub Pages. Check it out [here!](https://seanphilippi.github.io/scoreboard/)
 
