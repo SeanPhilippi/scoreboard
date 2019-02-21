@@ -1,0 +1,13 @@
+{
+  "main.css": "/scoreboard/static/css/main.8e963e09.chunk.css",
+  "main.js": "/scoreboard/static/js/main.c7206974.chunk.js",
+  "main.js.map": "/scoreboard/static/js/main.c7206974.chunk.js.map",
+  "static/js/1.5151e6c3.chunk.js": "/scoreboard/static/js/1.5151e6c3.chunk.js",
+  "static/js/1.5151e6c3.chunk.js.map": "/scoreboard/static/js/1.5151e6c3.chunk.js.map",
+  "runtime~main.js": "/scoreboard/static/js/runtime~main.dc1b4132.js",
+  "runtime~main.js.map": "/scoreboard/static/js/runtime~main.dc1b4132.js.map",
+  "static/css/main.8e963e09.chunk.css.map": "/scoreboard/static/css/main.8e963e09.chunk.css.map",
+  "index.html": "/scoreboard/index.html",
+  "precache-manifest.b5f4a14d62e0470e9c41bd14948e7c87.js": "/scoreboard/precache-manifest.b5f4a14d62e0470e9c41bd14948e7c87.js",
+  "service-worker.js": "/scoreboard/service-worker.js"
+}
